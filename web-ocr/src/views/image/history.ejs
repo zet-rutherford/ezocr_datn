@@ -1,0 +1,34 @@
+<div class="container my-5">
+  <h3>Lịch sử tải lên</h3>
+  <div class="shadow-5-strong rounded-5 overflow-hidden">
+    <table class="table align-middle mb-0 bg-white table-hover">
+      <thead class="bg-light">
+        <tr>
+          <th class="w-5">ID</th>
+          <th class="w-25">Hình ảnh</th>
+          <th>Thời gian tạo</th>
+          <th>Thao tác</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% listImage.forEach(({id, filepath,createdAt})=>{ %>
+        <tr>
+          <td><%= id %></td>
+          <td>
+            <div class="d-flex align-items-center">
+              <img src="<%= filepath %>" alt="" sizes="" class="img-fluid" />
+            </div>
+          </td>
+          <td>
+            <p class="text-muted"><%= formatDate(createdAt) %></p>
+          </td>
+          <td>
+            <a href="/detail/<%= id %>" class="btn btn-primary">CHI TIẾT</a>
+            <a href="/delete/<%= id %>" class="btn btn-danger">XÓA</a>
+          </td>
+        </tr>
+        <%}) %>
+      </tbody>
+    </table>
+  </div>
+</div>

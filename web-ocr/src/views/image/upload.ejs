@@ -1,0 +1,11 @@
+<div class="container col-6">
+  <h1>Xin chào, <%= req.user.name %></h1>
+  <h1>Upload</h1>
+  <form action="/upload" method="post" enctype="multipart/form-data">
+    <label class="form-label" for="customFile"
+      >Định dạng cho phép: JPG, PNG, HEIC</label
+    >
+    <input type="file" class="form-control" name="image" />
+    <button class="btn btn-primary my-3">Tải lên</button>
+  </form>
+</div>

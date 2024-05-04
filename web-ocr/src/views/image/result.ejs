@@ -1,0 +1,32 @@
+<style>
+  pre {
+    font-family: Arial, sans-serif;
+  }
+</style>
+<h2 class="text-center">Nhận dạng ảnh thành công</h2>
+<h4>
+  ID Hình ảnh
+  <button class="btn btn-outline-primary btn-sm d-inline-block">
+    <%= imageId %>
+  </button>
+</h4>
+
+<div class="shadow-5-strong rounded-5 overflow-hidden">
+  <table class="table align-middle mb-0 bg-white table-hover">
+    <thead class="bg-light">
+      <th class="col-5">Hình ảnh</th>
+      <th class="col-5">Kết qủa chuyển đổi</th>
+    </thead>
+    <tbody>
+      <td class="col-5">
+        <img src="<%= filepath %>" alt="" srcset="" class="img-fluid" />
+      </td>
+      <td class="col-5">
+        <div><pre><%= content %></pre></div>
+      </td>
+    </tbody>
+  </table>
+</div>
+<div class="d-flex align-items-center justify-content-center my-3">
+  <a href="/" class="btn btn-primary text-center">Quay về trang chủ</a>
+</div>
